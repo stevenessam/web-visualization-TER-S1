@@ -9,7 +9,7 @@ import SearchResult from "../search/SearchResult";
 
 /**
  * Highlighted text span with a pop-over.
- * Used to highlight both articles' named entities or global descriptors.
+ * Used to highlight both articles' named entities
  */
 const EntityHighlight = (props) => {
     const {

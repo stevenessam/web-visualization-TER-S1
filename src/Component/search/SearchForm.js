@@ -10,7 +10,7 @@ import './SearchForm.css';
 import { suggestionsMock } from './suggestions.mock';
 
 /**
- * The search form is meant to help a user select entities from a vocabulary (e.g. Agrovoc)
+ * The search form is meant to help a user select entities from a vocabulary
  * by entering the first letters of entity labels and obtaining a list of suggestions (auto-completion).
  *
  * The whole component consists of 3 elements:
@@ -325,7 +325,7 @@ function SearchForm() {
                 searchResultsSubConcept.length !== 0 ?
                     <div className="component">
                         { /* Search results and buttons to navigate the pages */}
-                        <div className="content_header">Results matching the selected descriptors or any more specific descriptors
+                        <div className="content_header">Results matching the selected Entity or any more specific Entities
                         </div>
                         <SearchResultsList searchResults={searchResultsSubConcept} />
                     </div>
@@ -336,7 +336,7 @@ function SearchForm() {
                 searchResultsRelated.length !== 0 ?
                     <div className="component">
                         { /* Search results and buttons to navigate the pages */}
-                        <div className="content_header">Results matching descriptors related to those selected
+                        <div className="content_header">Results matching Entities related to those selected
                         </div>
                         <SearchResultsList searchResults={searchResultsRelated} />
                     </div>

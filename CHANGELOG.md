@@ -2,7 +2,7 @@
 
 ## [1.1] 2023-10-04
 
-- Add a search page to search documents by Agrovoc descriptor, including reasoning using the Agrovoc hierarchy
+- Add a search page to search documents by entities
 - Refactoring
 
 ## [1.0] 2022-05-01
