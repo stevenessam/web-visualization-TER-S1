@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import SearchResult from "./SearchResult";
 import ReactPaginate from "react-paginate";
@@ -81,17 +81,17 @@ const SearchResultsList = (props) => {
 
             { /* Show the current page of search results */}
             <div>
-                <div className="divider-light"/>
+                <div className="divider-light" />
 
                 {resultsDisplayed.map((_result, index) => (
                     <SearchResult key={index}
-                                  document={_result.document}
-                                  title={_result.title}
-                                  authors={_result.authors}
-                                  date={_result.date}
-                                  publisher={_result.publisher}
-                                  linkPDF={_result.linkPDF}
-                                  matchedEntities={_result.matchedEntities !== undefined ? _result.matchedEntities : []}
+                        document={_result.document}
+                        title={_result.title}
+                        authors={_result.authors}
+                        date={_result.date}
+                        publisher={_result.publisher}
+                        linkPDF={_result.linkPDF}
+                        matchedEntities={_result.matchedEntities !== undefined ? _result.matchedEntities : []}
                     />
                 ))}
             </div>

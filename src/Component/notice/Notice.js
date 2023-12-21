@@ -5,7 +5,7 @@ import Abstract from './Abstract';
 import Footer from '../Footer';
 import NavBar from '../NavBar';
 import Metadata from "./Metadata";
-import MapComponent from "./Map";
+
 
 /**
  * Entry point of the notice page
