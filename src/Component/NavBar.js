@@ -11,7 +11,7 @@ class NavBar extends Component {
         return (
             <Navbar bg="" variant="">
                 <Navbar.Brand href=""></Navbar.Brand>
-                <img className="mt-4 me-5" id="logo_d2kab" src={logo_d2kab} alt="ISSA"></img>
+                <img className="mt-4 me-5" id="logo_d2kab" src={logo_d2kab} alt="D2KAB"></img>
                 <div className="mt-4 me-0 col-sm-3">
                     This interface developed by the <a href="https://d2kab.mystrikingly.com/">D2KAB</a>.
                 </div>
