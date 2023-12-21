@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
-import {Col, Row} from "react-bootstrap";
-import {BiDownload} from "react-icons/bi";
-import {HiOutlineDocumentMagnifyingGlass} from "react-icons/hi2";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Col, Row } from "react-bootstrap";
+import { BiDownload } from "react-icons/bi";
+import { HiOutlineDocumentMagnifyingGlass } from "react-icons/hi2";
 import EntityDescriptorSimple from "./EntityDescriptorSimple";
 import './SearchResult.css';
 
@@ -81,12 +81,12 @@ const SearchResult = (props) => {
                 </Col>
                 <Col xs={1} className="fs-5">
                     <Link className="a_icons" to={"/notice?uri=" + document}
-                          target={title}><HiOutlineDocumentMagnifyingGlass/></Link>
+                        target={title}><HiOutlineDocumentMagnifyingGlass /></Link>
                     &nbsp;
-                    <a href={linkPDF} target={title}><BiDownload/></a>
+                    <a href={linkPDF} target={title}><BiDownload /></a>
                 </Col>
             </Row>
-            <div className="divider-light"/>
+            <div className="divider-light" />
         </div>
     );
 };

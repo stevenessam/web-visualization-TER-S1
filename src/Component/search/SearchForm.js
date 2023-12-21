@@ -246,7 +246,7 @@ function SearchForm() {
     return (
         <>
             <div className="component">
-                <h1 className="">Search documents by descriptors</h1>
+                <h1 className="">Search documents by Entity</h1>
                 <div className="multiple-inputs-container">
 
                     { /* List of the search entities that have already been selected */}

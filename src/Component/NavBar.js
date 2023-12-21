@@ -18,9 +18,6 @@ class NavBar extends Component {
                 <img className="mt-4 mx-3" id="logo_d2kab2" src={logo_d2kab2} alt="logod2kab2"></img>
                 <Nav className="mr-auto flex-column">
                     <Nav.Item>
-                        <Link to="/notice">Document</Link>
-                    </Nav.Item>
-                    <Nav.Item>
                         <Link to="/search">Search</Link>
                     </Nav.Item>
                 </Nav>
