@@ -5,11 +5,6 @@
     font-weight: normal;
 }
 
-.result-publisher {
-    font-style: italic;
-}
-
-
 .navigation-section {
     display: flex;
     flex-direction: column;

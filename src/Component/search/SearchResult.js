@@ -16,9 +16,6 @@ const SearchResult = (props) => {
         title,
         authors,
         date,
-        publisher,
-        lang,
-        linkPDF,
         matchedEntities
     } = props;
 
@@ -77,13 +74,10 @@ const SearchResult = (props) => {
                     <span className="result-title">{title}.&nbsp;</span>
                     <span className="result-authors">{firstAuthors}.&nbsp;</span>
                     <span className="">{date}.&nbsp;</span>
-                    <span className="fst-italic">{publisher !== undefined ? publisher + '.' : ''} </span>
                 </Col>
                 <Col xs={1} className="fs-5">
                     <Link className="a_icons" to={"/notice?uri=" + document}
                         target={title}><HiOutlineDocumentMagnifyingGlass /></Link>
-                    &nbsp;
-                    <a href={linkPDF} target={title}><BiDownload /></a>
                 </Col>
             </Row>
             <div className="divider-light" />
@@ -96,9 +90,6 @@ SearchResult.propTypes = {
     title: PropTypes.string.isRequired,
     authors: PropTypes.array,
     date: PropTypes.string,
-    publisher: PropTypes.string,
-    lang: PropTypes.string,
-    linkPDF: PropTypes.string,
     matchedEntities: PropTypes.array
 }
 
