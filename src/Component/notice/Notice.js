@@ -3,7 +3,6 @@ import './Notice.css';
 import { Container } from 'react-bootstrap';
 import Abstract from './Abstract';
 import Footer from '../Footer';
-import Descriptors from './Descriptors';
 import NavBar from '../NavBar';
 import Metadata from "./Metadata";
 import MapComponent from "./Map";
