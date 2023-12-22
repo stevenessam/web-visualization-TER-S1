@@ -105,19 +105,6 @@ const Abstract = () => {
      * Reformat the list of entities where the URIs/labels of the entities with the same text and startPos
      * are grouped in new fields entityUris and entityLabels.
      * Recompute the endPos.
-     *
-     * @example
-     * The 2 entities:
-     * { entityText: "SARS-CoV", startPos: 529, endPos: 537,
-     *   entityUri: "http://www.wikidata.org/entity/Q85438966",
-     *   entityLabel: "severe acute respiratory syndrome coronavirus" }
-     * { entityText: "SARS-CoV", startPos: 529,
-     *   entityUri: "http://dbpedia.org/resource/Severe_acute_respiratory_syndrome-related_coronavirus" }
-     * will be grouped into:
-     * { entityText: "SARS-CoV", startPos: 529, endPos: 537,
-     *   entityUris: [ "http://www.wikidata.org/entity/Q85438966", "http://dbpedia.org/resource/Severe_acute_respiratory_syndrome-related_coronavirus" ],
-     *   entityLabels: [ "severe acute respiratory syndrome coronavirus", "" ] }
-     *
      * @param entities[]
      * @returns {entities[]}
      */

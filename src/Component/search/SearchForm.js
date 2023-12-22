@@ -42,8 +42,6 @@ function SearchForm() {
 
     const [searchResultsSubConcept, setSearchResultsSubconcept] = useState([]);
 
-    const [searchResultsRelated, setSearchResultsRelated] = useState([]);
-
 
     /**
      * Use the autocomplete service to propose suggestions based on the current input value.
@@ -150,7 +148,6 @@ function SearchForm() {
      */
     useEffect(() => {
         setSearchResultsSubconcept([]);
-        setSearchResultsRelated([]);
         if (isLoading) {
             if (searchEntities.length === 0) {
                 if (process.env.REACT_APP_LOG === "on") {
@@ -210,38 +207,6 @@ function SearchForm() {
         })
         //eslint-disable-next-line
     }, [searchResults]);
-
-
-    /**
-     * Search for documents that match concepts related to the selected concepts
-     * Started after getting the exact match results.
-     */
-    useEffect(() => {
-        let query = process.env.REACT_APP_BACKEND_URL + "/searchDocumentsRelated/?uri=" + searchEntities.map(_s => _s.entityUri).join(',');
-        if (process.env.REACT_APP_LOG === "on") {
-            console.log("Will submit backend query: " + query);
-        }
-        axios(query).then(response => {
-            if (isEmptyResponse(query, response)) {
-                setSearchResultsRelated([]);
-            } else {
-                let _results = response.data.result;
-                if (process.env.REACT_APP_LOG === "on") {
-                    console.log("------------------------- Retrieved " + _results.length + " search results.");
-                    //_results.forEach(e => console.log(e));
-                }
-
-                // Filter the results to keep only those documents that were not in the previous sets of results
-                let additionalResults = _results.filter((_a) =>
-                    !searchResults.find((_r) => _r.document === _a.document)
-
-                );
-                setSearchResultsRelated(additionalResults);
-            }
-        })
-        //eslint-disable-next-line
-    }, [searchResultsSubConcept]);
-
 
     return (
         <>
@@ -331,18 +296,6 @@ function SearchForm() {
                     </div>
                     : null
             }
-
-            {
-                searchResultsRelated.length !== 0 ?
-                    <div className="component">
-                        { /* Search results and buttons to navigate the pages */}
-                        <div className="content_header">Results matching Entities related to those selected
-                        </div>
-                        <SearchResultsList searchResults={searchResultsRelated} />
-                    </div>
-                    : null
-            }
-
         </>
     );
 }
